@@ -14,6 +14,23 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../static/css/styles.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.2.2/photoswipe.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.2.2/photoswipe-lightbox.esm.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.2.2/photoswipe-lightbox.esm.min.js"></script>
+        <script type="module">
+            import PhotoSwipeLightbox from 'photoswipe/lightbox';
+            import 'photoswipe/style.css';
+
+            const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('photoswipe')
+            });
+            lightbox.init();
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -35,6 +52,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                 </ul>
             </div>
         </nav>
@@ -226,7 +244,7 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
                     <p>Apart from being a developer, teacher, and entrepreneur, I enjoy most of my time being outdoors, having adventure and doing extreme Sports, I do paragliding, Climbing and MTB.</p>
-                    <p class="mb-0">When i'm indoors, I really enjoy Cooking, reading, painting, making thinkering proyects for gardening, IoT and automathing my home.</p>
+                    <p class="mb-0">When i'm indoors, I really enjoy Cooking, reading, painting, making thinkering proyects for gardening, IoT and automating my home.</p>
                 </div>
             </section>
             <hr class="m-0" />
@@ -258,6 +276,57 @@
                     </ul>
                 </div>
             </section>
+
+            <!-- Portfolio-->
+            <section class="resume-section" id="portfolio">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Portfolio</h2>
+
+            <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
+                <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" 
+                  data-pswp-width="1669" 
+                  data-pswp-height="2500" 
+                  target="_blank">
+                  <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
+                </a>
+                <!-- cropped thumbnail: -->
+                <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" 
+                  data-pswp-width="1875" 
+                  data-pswp-height="2500" 
+                  data-cropped="true" 
+                  target="_blank">
+                  <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
+                  Cropped
+                </a>
+                <!-- data-pswp-src with custom URL in href -->
+                <a href="https://unsplash.com" 
+                  data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+                  data-pswp-width="2500" 
+                  data-pswp-height="1666" 
+                  target="_blank">
+                  <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+                </a>
+                <!-- Without thumbnail: -->
+                <a href="http://example.com" 
+                  data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
+                  data-pswp-width="2500" 
+                  data-pswp-height="1668" 
+                  target="_blank">
+                  No thumbnail
+                </a>
+                <!-- wrapped with any element: -->
+                <div>
+                  <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+                    data-pswp-width="2500" 
+                    data-pswp-height="1667" 
+                    target="_blank">
+                    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+                </div>
+            </section>
+
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
